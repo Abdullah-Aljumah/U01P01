@@ -46,8 +46,10 @@ header a {
 }
 /* Hover Home Favorite Contact Us */
 header a:hover {
+  text-decoration: none;
+
   border-radius: 50px;
-  background-color: #3613b4;
+  background-color: #b41313;
   color: rgb(255, 255, 255);
 }
 
@@ -117,8 +119,12 @@ img {
 }
 /* logo */
 .logo {
-  width: 200px;
-  height: 90px;
+  text-indent: 0px;
+  width: 300px;
+  height: 120px;
+  border: 0;
+  box-shadow:none
+  
 }
 
 /* Second Page */
@@ -147,7 +153,7 @@ img {
 /* second page img */
 .descImg {
   margin-left: 20px;
-  width: 650px;
+  width: 450px;
   height: 450px;
 }
 
