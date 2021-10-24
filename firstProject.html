@@ -5,23 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="firstProject.css" />
+
   </head>
   <body>
     <!-- Header -->
     <header>
-      <a href="http://127.0.0.1:5500/firstProject.html#">Home</a>
-      <a href="#" class="f">Favorite</a>
+      <a href="firstProject.html">Home</a>
+      <a href="fav.html" class="f">Favorite</a>
       <!-- Logo -->
-      <img class="logo" src="#" alt="#" />
+      <img class="logo" src="#" alt="logo" />
       <!--Search Bar-->
-      <input type="text" placeholder="search" />
+      <input
+        type="text"
+        placeholder="search..."
+        onkeyup="searchBar()"
+        class="myInput"
+      />
       <a href="#" class="contactus">Contact Us</a>
     </header>
     <!-- End header -->
 
     <!--Wrapper-->
-    <h1>HEEEEEEEEEEEEEEELO</h1>
+
     <div class="wrapper">
       <div class="ul1">
         <ul class="ulGames"></ul>
@@ -29,11 +36,13 @@
     </div>
     <!--End Wrapper-->]
 
+    <div class="descP"></div>
+
     <!--Footer-->
     <footer>
-<a href="">Contact Us</a>
-<p>Lorem ipsum dolor sit amet.</p>
-<a href="http://127.0.0.1:5500/firstProject.html#">Back To Top</a>
+      <a href="">Contact Us</a>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <a href="firstProject.html">Back To Home</a>
     </footer>
 
     <script
@@ -42,5 +51,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="firstProject.js"></script>
+    <script src="fav.js"></script>
   </body>
 </html>
+
