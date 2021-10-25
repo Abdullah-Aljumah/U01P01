@@ -82,31 +82,33 @@ if (listGame == null) {
   localStorage.setItem("listGame", JSON.stringify(listGame));
 }
 
-
 // fav page
 const addToFav = (i) => {
-  console.log(listGame[i].fav);
   if (listGame[i].fav == false) {
     listGame[i].fav = true;
+    alert("add to favorite");
   } else {
     listGame[i].fav = false;
+    alert("remove from favorite");
   }
-  console.log(listGame[i].fav);
 
   localStorage.setItem("listGame", JSON.stringify(listGame));
 };
+
+// show more function ++
 let max = 4;
 let i = 0;
+
 // rinder
 const rinder = () => {
   for (i; i < max; i++) {
     $(".ulGames").append(
       `<div class='li1'>
-       <li>
+       <li class='searchLi'>
        <img src="${listGame[i].imgUrl}" alt="Game Logo"> 
         <p onclick=secP(${i}) style= cursor:pointer>${listGame[i].Name}</p>
         <p>${listGame[i].desc}</p>
-        <button class='btnFav btn btn-danger' onclick=addToFav(${i})>Add To Favorite </button>
+        <button id='buttonFavorite'  class='btnFav btn btn-danger' onclick=addToFav(${i}) > Favorite </button>
         </button> 
         </li>
         </div>`
@@ -115,24 +117,22 @@ const rinder = () => {
 };
 rinder();
 
-
 // second page
 const secP = (i) => {
   $(".ul1").hide();
-  $(".btnCenter").hide()
+  $(".btnCenter").hide();
 
   $(".descP").append(
-    `<div class="descImg"> <img src="${listGame[i].imgUrl}" alt="Game Logo"/> </div>
-      <div class='newPage'> <h2>${listGame[i].Name}</h2><p>${listGame[i].info}</div>
-     <div>  <button class='btnFav btn btn-danger'id='btnFavSecPage' onclick=addToFav(${i})>Add To Favorite </button>  </div>`
+    `<div class = 'divDescPage'>
+    <div class="descImg"> <img src="${listGame[i].imgUrl}" alt="Game Logo"/> </div>
+      <div class='newPage'> <h2 class='h2Search'>${listGame[i].Name}</h2><p>${listGame[i].info}
+     <br><br> <button value="no" class='btnFav btn btn-danger'id='btnFavSecPage' onclick=addToFav(${i})  > Favorite </button>  </div>
+     </div>`
   );
   rinder();
 };
 
-
-
-
-
+// show more button
 
 $(".showMore").on("click", () => {
   i = 4;
@@ -140,3 +140,5 @@ $(".showMore").on("click", () => {
   rinder();
   $(".showMore").remove();
 });
+
+//  search bar
