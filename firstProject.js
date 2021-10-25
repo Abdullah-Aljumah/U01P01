@@ -9,6 +9,7 @@ const listGameStorage = [
     desc: "MultiPlayer game 2-12 Players And single player",
     info: "is a free-to-play online-only multiplayer first-person shooter video game developed by Bungie. It was originally released as a pay to play game in 2017 for the PlayStation 4, Xbox One, and Microsoft Windows platforms",
     fav: false,
+    images: ["/img/Destiny2.jpg","/img/Destiny2.jpg","/img/Destiny2.jpg","/img/Destiny2.jpg"]
   },
 
   {
@@ -127,8 +128,13 @@ const secP = (i) => {
     <div class="descImg"> <img src="${listGame[i].imgUrl}" alt="Game Logo"/> </div>
       <div class='newPage'> <h2 class='h2Search'>${listGame[i].Name}</h2><p>${listGame[i].info}
      <br><br> <button value="no" class='btnFav btn btn-danger'id='btnFavSecPage' onclick=addToFav(${i})  > Favorite </button>  </div>
-     </div>`
+     </div>  
+     <br><br><div class='extraImages'> </div>`
+     
   );
+  for (let j = 0; j <4 ; j++) {
+    $(".extraImages").append(`<div class='imgs4'><img  id='secondImages4' src='${listGame[i].images[j]}' alt='test'><div>`)
+  }
   rinder();
 };
 

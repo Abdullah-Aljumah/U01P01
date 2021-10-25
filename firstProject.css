@@ -124,9 +124,8 @@ img {
   height: 150px;
   border: 0;
   box-shadow: none;
-margin-right: 50px
+  margin-right: 50px;
 }
-
 
 /* Show More */
 .btnCenter {
@@ -150,8 +149,6 @@ margin-right: 50px
   font-family: "Times New Roman", Times, serif;
 }
 
-
-
 /* Second page name of the game */
 .descP h2 {
   text-align: center;
@@ -165,8 +162,6 @@ margin-right: 50px
   text-align: center;
   color: rgb(255, 255, 255);
 }
-
-
 
 /* second page img */
 .descImg {
@@ -186,8 +181,18 @@ margin-right: 50px
   border: 1px solid rgba(134, 134, 134, 0.158);
   margin-left: 20px;
   height: fit-content;
-  
 }
+
+/* sec page 4 img */
+
+/* #imgs4{
+display: flex;
+width: 10%;
+ margin: 0 0 0 20px;
+} */
+
+
+
 
 /* footer */
 footer {
@@ -214,16 +219,14 @@ footer a:hover {
 
 /* Fav page */
 
-
 /* fav btn */
 .btnFav {
   margin-bottom: 10px;
 }
 
-
 .ulGamesFav {
   margin: 40px 40px;
-  display:grid;
+  display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 100px;
 }
@@ -237,16 +240,15 @@ footer a:hover {
   font-size: 20px;
   text-align: center;
   transition: 0.3s;
-
 }
- .favItem:hover {
-   border-radius: 30px;
- }
+.favItem:hover {
+  border-radius: 30px;
+}
 
- .favImg {
-   margin-top: 20px;
- }
- .favWelcoming {
-   text-align: center;
-   color: white;
- }
+.favImg {
+  margin-top: 20px;
+}
+.favWelcoming {
+  text-align: center;
+  color: white;
+}
