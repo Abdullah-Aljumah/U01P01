@@ -45,12 +45,33 @@ header a {
   transition: 0.3s;
 }
 /* Hover Home Favorite Contact Us */
-header a:hover {
+header #favorite:hover {
   text-decoration: none;
-
   border-radius: 50px;
   background-color: #b41313;
   color: rgb(255, 255, 255);
+}
+header #home:hover {
+  text-decoration: none;
+  border-radius: 50px;
+  background-color: #1e13b4;
+  color: rgb(255, 255, 255);
+}
+
+header #contactUs:hover {
+  text-decoration: none;
+  border-radius: 50px;
+  background-color: #39b41385;
+  color: rgb(255, 255, 255);
+}
+/* logo */
+.logo {
+  text-indent: 0px;
+  width: 150px;
+  height: 150px;
+  border: 0;
+  box-shadow: none;
+  margin-right: 50px;
 }
 
 /* Search bar */
@@ -79,6 +100,9 @@ p {
   margin: 5px 0px 20px 0px;
 }
 
+.nameTheGame {
+  background-color: red;
+}
 /* p of the game */
 .ulGames li p {
   font-size: 11.5px;
@@ -93,6 +117,7 @@ p {
 
 /* div rinder <li> */
 .li1 {
+  background-color: rgba(60, 56, 99, 0.11);
   border: 1px solid rgba(134, 134, 134, 0.158);
   width: 38%;
   margin: 0 60px 150px 60px;
@@ -110,21 +135,16 @@ p {
   margin-top: 3rem;
 }
 
+.li1 button {
+  margin-left: 43.5%;
+}
+
 /* All img */
 img {
   border: 1px solid black;
   box-shadow: 0px 0px 400px -19px rgba(165, 187, 193, 0.75);
   -webkit-box-shadow: 0px 0px 400px -19px rgba(165, 187, 193, 0.75);
   -moz-box-shadow: 0px 0px 400px -19px rgba(165, 187, 193, 0.75);
-}
-/* logo */
-.logo {
-  text-indent: 0px;
-  width: 150px;
-  height: 150px;
-  border: 0;
-  box-shadow: none;
-  margin-right: 50px;
 }
 
 /* Show More */
@@ -158,63 +178,56 @@ img {
 }
 
 /* second page p of the game */
+
+.divDescPage {
+  margin-top: 2%;
+}
+
 .descP p {
   text-align: center;
   color: rgb(255, 255, 255);
 }
 
 /* second page img */
-.descImg {
+.secPageFirstImg {
   margin-left: 20px;
-  width: 450px;
-  height: 450px;
+  width: 300px;
+  height: 370px;
 }
 
-/* second page img */
-.descImg img {
+/* second page first img */
+.descImg .secPageFirstImg {
   width: 100%;
   height: 100%;
 }
 
 /* div second page h2 and p */
 .newPage {
+  width: 70%;
   border: 1px solid rgba(134, 134, 134, 0.158);
   margin-left: 20px;
   height: fit-content;
 }
 
 /* sec page 4 img */
-
-/* #imgs4{
-display: flex;
-width: 10%;
- margin: 0 0 0 20px;
-} */
-
-
-
-
-/* footer */
-footer {
-  color: white;
-  font-family: Georgia, "Times New Roman", Times, serif;
+.extraImages {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-  background-color: rgb(0, 0, 0);
-  transition: all 0.3 ease-in-out;
+  justify-content: center;
 }
 
-footer a {
-  text-decoration: none;
-  color: white;
+#secondImages {
+  margin-bottom: 20px;
+  margin-left: 15px;
+  width: 150px;
+  transition: 0.3;
 }
 
-/* hover footer */
-footer a:hover {
-  color: blanchedalmond;
+#secondImages:hover {
+  transition: 0.3;
+  width: 400px;
+  box-shadow: 18px 22px 101px -2px rgba(255, 255, 255, 0.52);
+  -webkit-box-shadow: 18px 22px 101px -2px rgba(255, 255, 255, 0.52);
+  -moz-box-shadow: 18px 22px 101px -2px rgba(255, 255, 255, 0.52);
 }
 
 /* Fav page */
@@ -251,4 +264,201 @@ footer a:hover {
 .favWelcoming {
   text-align: center;
   color: white;
+}
+
+.newPage {
+  color: white;
+  text-align: center;
+}
+
+.newPage h2 {
+  color: rgb(167, 20, 20);
+  font-size: 50px;
+  margin: 10px;
+}
+
+.descImg {
+  margin-left: 20px;
+}
+.favPageDescImg {
+  width: 300px;
+  height: 370px;
+}
+
+/* footer */
+footer {
+  color: white;
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  transition: all 0.3 ease-in-out;
+  border: 1px solid rgba(134, 134, 134, 0.158);
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.171);
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+/* hover footer */
+footer a:hover {
+  color: blanchedalmond;
+}
+
+.wrapperContact {
+  display: block;
+  text-align: center;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+
+#footer3 {
+  margin-top: 358px;
+}
+
+#footer2 {
+  margin-top: 358px;
+}
+
+/* media query */
+
+@media screen and (max-width: 426px) {
+  header {
+    background-image: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  header a {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 5%;
+    width: 15%;
+    font-size: 1px;
+  }
+
+  header input {
+    margin: 0;
+    padding: 0;
+    font-size: 1px;
+    width: 10%;
+    height: 10%;
+  }
+
+  .logo {
+    margin: 0;
+    width: 15%;
+    height: 50%;
+  }
+
+  .wrapper {
+    text-align: center;
+  }
+  .li1 {
+    border: none;
+  }
+.li1 h2 {
+  font-size: 20px;
+}
+/* .li1  {
+  width: 100px;
+  height: 450px;
+}
+.li1 img {
+  width: 10%;
+  height: 10%;
+} */
+
+  .li1 button {
+    margin: 0;
+  }
+
+  #showBtn {
+    margin-left: 120px;
+  }
+
+  footer {
+    width: 100%;
+    font-size: 10%;
+  }
+
+  /* second page desc */
+
+  .divDescPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .descImg .secPageFirstImg {
+    display: flex;
+
+    width: 70%;
+    height: 70%;
+  }
+
+  /* div second page h2 and p */
+  .newPage {
+    margin: 0;
+    display: block;
+    width: 70%;
+    border: 1px solid rgba(134, 134, 134, 0.158);
+    height: fit-content;
+    font-size: 1px;
+  }
+
+  .newPage button {
+    padding: 0%;
+    margin: 0;
+    margin-bottom: 2%;
+    width: 20%;
+    height: 1%;
+    font-size: 1%;
+  }
+  .newPage h2 {
+    font-size: 1%;
+  }
+  .newPage p {
+    font-size: 1%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* sec page 4 img */
+  .extraImages {
+    display: flex;
+    width: 100%;
+    margin-top: 27%;
+    margin-bottom: 10%;
+    padding: 0;
+  }
+
+  #secondImages {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 80px;
+  }
+
+  /* fav page */
+
+  .ulGamesFav {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .descImg {
+    display: flex;
+    justify-content: center;
+  }
 }
