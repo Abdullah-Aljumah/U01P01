@@ -114,7 +114,7 @@ const listGameStorage = [
   },
 ];
 
-// Value of listGame
+// Value of Local Storage
 if (listGame == null) {
   listGame = [...listGameStorage];
   localStorage.setItem("listGame", JSON.stringify(listGame));
@@ -132,13 +132,13 @@ const rinder = () => {
       <div onclick=secP(${i}) style= cursor:pointer>
        <li class='searchLi'>
        <img class='imgMedia' src="${listGame[i].imgUrl}" alt="Game Logo"> 
-        <h2>${listGame[i].Name}</h2>
+        <h2 class='h2Search' >${listGame[i].Name}</h2>
         <p>${listGame[i].desc}</p>
         </div>
-        <button id='buttonFavorite' class='btnFav btn btn-danger' onclick=addToFav(${i}) >${
+       <form action='firstProject.html'> <button id='buttonFavorite' class='btnFav btn btn-danger' onclick=addToFav(${i}) >${
         listGame[i].fav ? "Remove " : "Favorite"
       } 
-        </button>
+        </button> </form>
         </li>
         </div>`
     );
@@ -167,8 +167,12 @@ const secP = (i) => {
   $(".descP").append(
     `<div class = 'divDescPage'>
      <img class='secPageFirstImg' src="${listGame[i].imgUrl}" alt="Game Logo"/> 
-      <div class='newPage'> <h2 class='h2Search'>${listGame[i].Name}</h2><p>${listGame[i].info}
-     <br><br> <button value="no" class='btnFav btn btn-danger'id='btnFavSecPage' onclick=addToFav(${i})  > Favorite </button>  </div>
+      <div class='newPage'> <h2 class='h2Search'>${listGame[i].Name}</h2><p>${
+      listGame[i].info
+    }
+     <br><br> <button class='btnFav btn btn-danger'id='btnFavSecPage' onclick=addToFav(${i})  > ${
+      listGame[i].fav ? "Remove " : "Favorite"
+    }  </button>  </div>
      </div>  
      <br><br><div class='extraImages'> </div>`
   );
@@ -180,7 +184,7 @@ const secP = (i) => {
   rinder();
 };
 
-// show more button
+// Show all button
 
 $(".showMore").on("click", () => {
   i = 4;
@@ -189,4 +193,23 @@ $(".showMore").on("click", () => {
   $(".showMore").remove();
 });
 
-//  search bar
+// search bar
+const searchBar = () => {
+  max = listGame.length;
+  rinder();
+  $(".showMore").remove();
+
+  let li = document.getElementsByClassName("li1");
+  let h2, i, txtValue;
+
+  let value = $(".myInput").val().toUpperCase();
+  for (i = 0; i < li.length; i++) {
+    h2 = $(".h2Search")[i];
+    txtValue = h2.innerText;
+    if (txtValue.toUpperCase().indexOf(value) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+};

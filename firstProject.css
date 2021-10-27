@@ -285,6 +285,42 @@ img {
   height: 370px;
 }
 
+/* Contact Us */
+.wrapperContact {
+  padding: 50px;
+}
+.wrapperContact h1 {
+  margin-right: 100px;
+}
+
+.allContactItem {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.contactPhone {
+  text-indent: 0px;
+  border: 0;
+  box-shadow: none;
+  width: 50px;
+}
+
+.contactEmail {
+  text-indent: 0px;
+  border: 0;
+  box-shadow: none;
+  width: 50px;
+}
+
+.contactLiveChat {
+  text-indent: 0px;
+  border: 0;
+  box-shadow: none;
+  width: 50px;
+}
+
 /* footer */
 footer {
   color: white;
@@ -366,17 +402,9 @@ footer a:hover {
   .li1 {
     border: none;
   }
-.li1 h2 {
-  font-size: 20px;
-}
-/* .li1  {
-  width: 100px;
-  height: 450px;
-}
-.li1 img {
-  width: 10%;
-  height: 10%;
-} */
+  .li1 h2 {
+    font-size: 20px;
+  }
 
   .li1 button {
     margin: 0;
@@ -415,7 +443,6 @@ footer a:hover {
     height: fit-content;
     font-size: 1px;
   }
-
   .newPage button {
     padding: 0%;
     margin: 0;
@@ -433,18 +460,23 @@ footer a:hover {
     padding: 0;
   }
 
+  .secPageFirstImg {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
   /* sec page 4 img */
   .extraImages {
     display: flex;
     width: 100%;
-    margin-top: 27%;
+    margin-top: 35%;
     margin-bottom: 10%;
     padding: 0;
   }
 
   #secondImages {
     display: block;
-    margin: 0;
+    margin-top: 20px;
     padding: 0;
     width: 80px;
   }
@@ -460,5 +492,76 @@ footer a:hover {
   .descImg {
     display: flex;
     justify-content: center;
+  }
+
+  .favPageDescImg {
+    width: 187px;
+    height: 217px;
+    margin-bottom: 20px;
+  }
+
+  /* Contact Us */
+  .wrapperContact {
+    margin: 0;
+    padding: 0;
+    font-size: 1px;
+  }
+  .wrapperContact h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+  }
+
+  .ContactUsPhone {
+    background-color: rgba(0, 0, 0, 0.158);
+  }
+
+  .contacUsLiveChat {
+    background-color: rgba(0, 0, 0, 0.158);
+  }
+  .contactUsEmail {
+    background-color: rgba(0, 0, 0, 0.158);
+  }
+
+  .wrapperContact h2 {
+    font-size: 1px;
+  }
+  .allContactItem {
+    display: block;
+    font-size: 1px;
+  }
+
+  .allContactItem p {
+    margin: 0;
+  }
+
+  .contactPhone {
+    width: 30px;
+    text-indent: 0px;
+    border: 0;
+    box-shadow: none;
+    margin-top: 10px;
+  }
+
+  .contactEmail {
+    width: 30px;
+    text-indent: 0px;
+    border: 0;
+    box-shadow: none;
+    margin-top: 10px;
+  }
+
+  .contactLiveChat {
+    width: 30px;
+    text-indent: 0px;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .wrapperContact button {
+    width: 20%;
+    height: 1.5x;
+    font-size: 1px;
+    margin: 10px 0;
   }
 }
