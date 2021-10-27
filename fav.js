@@ -8,10 +8,11 @@ const rinderFav = () => {
       `<div class='favPage'>
        <div class='favItem'> <div class='favImg' onclick=secP2(${i}) style= cursor:pointer><img src="${arrFav[i].imgUrl}" alt="Game Logo"> </div>
           <div class='favH2'> <p onclick=secP2(${i}) style= cursor:pointer>${arrFav[i].Name}</p> </div>
-          <br><br><form action=fav.html> <button value="no" class='btnFav btn btn-danger'id='btnFavSecPage' onclick=addToFav1(${i})  > Remove  </button> </form>
+          <br><br><form action=fav.html> <button class='btnFav btn btn-danger'id='btnFavSecPage' onclick=addToFav1(${i})  > Remove  </button> </form>
            </div> 
            </div>`
     );
+    
   }
 };
 

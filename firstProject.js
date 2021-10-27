@@ -60,12 +60,7 @@ const listGameStorage = [
     desc: "Single player & 2 MultiPlayer",
     info: "Ghost of Tsushima is a 2020 action-adventure game developed by Sucker Punch Productions and published by Sony Interactive Entertainment. Featuring an open world, the player controls Jin Sakai, a samurai on a quest to protect Tsushima Island during the first Mongol invasion of Japan. The game was released for PlayStation 4 on July 17, 2020, and a Director's Cut for PlayStation 4 and PlayStation 5 was released on August 20, 2021. It received praise for its visuals, art direction, narrative, and combat but was criticized for its open world design. Ghost of Tsushima also earned several award nominations and wins. It had sold 6.5 million copies by March 2021.",
     fav: false,
-    images: [
-      "img/got2.jpg",
-      "img/got3.jpg",
-      "img/got4.jpg",
-      "img/got5.jpg",
-    ],
+    images: ["img/got2.jpg", "img/got3.jpg", "img/got4.jpg", "img/got5.jpg"],
   },
   {
     id: 6,
@@ -90,12 +85,7 @@ const listGameStorage = [
     desc: "single player & 2 Multiplayer",
     info: "Middle-earth: Shadow of War is an action role-playing video game developed by Monolith Productions and published by Warner Bros. Interactive Entertainment. It is the sequel to 2014's Middle-earth: Shadow of Mordor, and was released worldwide for Microsoft Windows, PlayStation 4, and Xbox One on October 10, 2017.Shadow of War continues the previous game's narrative, which is based on J. R. R. Tolkien's legendarium and set in between the events of Peter Jackson's The Hobbit and The Lord of the Rings film trilogies, from which the game takes inspiration. The player continues the story of the ranger Talion and the spirit of the elf lord Celebrimbor, who shares Talion's body, as they forge a new Ring of Power to amass an army to fight against Sauron. The game builds upon the Nemesis System introduced in Shadow of Mordor, allowing Talion to gain followers from several races of Middle-earth, including Uruks and Ologs, and plan out complex strategies using these to complete missions.",
     fav: false,
-    images: [
-      "img/sow2.jpg",
-      "img/sow3.jpg",
-      "img/sow4.jpg",
-      "img/sow5.jpg",
-    ],
+    images: ["img/sow2.jpg", "img/sow3.jpg", "img/sow4.jpg", "img/sow5.jpg"],
   },
   {
     id: 8,
@@ -163,14 +153,14 @@ const addToFav = (i) => {
 const secP = (i) => {
   $(".ul1").hide();
   $(".btnCenter").hide();
-
+  $(".descP").html("");
   $(".descP").append(
     `<div class = 'divDescPage'>
      <img class='secPageFirstImg' src="${listGame[i].imgUrl}" alt="Game Logo"/> 
       <div class='newPage'> <h2 class='h2Search'>${listGame[i].Name}</h2><p>${
       listGame[i].info
     }
-     <br><br> <button class='btnFav btn btn-danger'id='btnFavSecPage' onclick=addToFav(${i})  > ${
+     <br><br> <button class='btnFav btn btn-danger'id='btnFavSecPage' onclick="addToFav(${i}); secP(${i});"> ${
       listGame[i].fav ? "Remove " : "Favorite"
     }  </button>  </div>
      </div>  
@@ -195,7 +185,6 @@ $(".showMore").on("click", () => {
 
 // search bar
 const searchBar = () => {
-
   // active show all button
   max = listGame.length;
   rinder();
