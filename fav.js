@@ -1,6 +1,9 @@
 const arr = JSON.parse(localStorage.getItem("listGame"));
 let arrFav = arr.filter((listGame) => listGame.fav);
 
+
+
+
 // Rinder fav
 const rinderFav = () => {
   for (let i = 0; i < arrFav.length; i++) {
@@ -12,11 +15,19 @@ const rinderFav = () => {
            </div> 
            </div>`
     );
-    
   }
 };
 
-rinderFav();
+if(arrFav.length < 1 ){
+  $(".favWelcoming").hide();
+  $(".favIsEmpty").append(`<h1>Favorite list is empty </h1>`)
+
+}
+
+else{
+  rinderFav()
+ }
+// rinderFav();
 
 // Second page description
 const secP2 = (i) => {
